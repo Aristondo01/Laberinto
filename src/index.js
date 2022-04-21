@@ -12,9 +12,8 @@ const App = () => {
     const [victoria, setVictoria]= useState(false)
     
     const audio =useRef(new Audio(cancion))
-    
+
     useEffect(()=>{
-        console.log("Inicie")
         audio.current.load()
         audio.current.play()
         audio.current.loop=true
@@ -22,7 +21,9 @@ const App = () => {
         
     },[])
 
+
     return(
+        
         <div css={{backgroundColor:"black",
                    display:"flex",
                    width:"100vw",
