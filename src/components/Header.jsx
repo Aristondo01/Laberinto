@@ -1,8 +1,9 @@
 import React,{useEffect,useState} from "react";
 import titulo from "../../public/Multimedia/Titulo.gif"
 import { css } from "@emotion/react";
-const Header = ({alto,setAlto,ancho,setAncho,setCaminos,setVictoria}) => {
+const Header = ({alto,setAlto,ancho,setAncho,setCaminos,setVictoria,audio}) => {
   
+    
     const [Created, setCreated]=useState(false)
 
 

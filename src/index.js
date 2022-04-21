@@ -14,13 +14,13 @@ const App = () => {
     const audio =useRef(new Audio(cancion))
     
     useEffect(()=>{
-        
+        console.log("Inicie")
         audio.current.load()
         audio.current.play()
         audio.current.loop=true
         audio.current.volume=0.15
         
-    },[audio])
+    },[])
 
     return(
         <div css={{backgroundColor:"black",
@@ -31,7 +31,7 @@ const App = () => {
                    justifyContent:"center",
                    alignItems:"center",
                    flexDirection:"column",}}>
-            <Header alto={alto} ancho={ancho} setAlto={setAlto} setAncho={setAncho} setCaminos={setCaminos} setVictoria={setVictoria}/>
+            <Header alto={alto} ancho={ancho} setAlto={setAlto} setAncho={setAncho} setCaminos={setCaminos} setVictoria={setVictoria }/>
             {caminos!=null && <Maze caminos={caminos} setCaminos={setCaminos} victoria={victoria} setVictoria={setVictoria}/>}
         </div>)
 }
