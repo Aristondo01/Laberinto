@@ -32,6 +32,7 @@ module.exports = {
         'react/jsx-indent-props': ['error', 4],
         'object-curly-newline': ['error', { multiline: true }],
         'no-nested-ternary': 'off',
+        'react/forbid-prop-types': 'off',
 
     },
 }

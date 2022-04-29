@@ -6,7 +6,8 @@ const Header = ({ alto, setAlto, ancho, setAncho, setCaminos, setVictoria }) => 
     const [Created, setCreated] = useState(false)
 
     const fetchLaberinto = async () => {
-        const response = await fetch('https://maze.juanelcaballo.club/?type=json&w=', ancho, '&h=', alto)
+        const fet = `https://maze.juanelcaballo.club/?type=json&w=${ancho}&h=${alto}`
+        const response = await fetch(fet)
             .then((response1) => response1.json())
             .then((responseInJSON) => responseInJSON)
         setCaminos([...response])
@@ -16,8 +17,8 @@ const Header = ({ alto, setAlto, ancho, setAncho, setCaminos, setVictoria }) => 
     const Reset = () => {
         setCaminos(null)
         setCreated(false)
-        setAncho('')
-        setAlto('')
+        setAncho(1)
+        setAlto(1)
         setVictoria(false)
     }
     return (

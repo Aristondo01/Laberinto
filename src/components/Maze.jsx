@@ -70,15 +70,15 @@ const Maze = ({ caminos, setCaminos, victoria, setVictoria }) => {
                             >
                                 {camino.map((pared, index2) => {
                                     if (pared === 'p') {
-                                        return (<div key={`${index.id}${index2.id}`} css={{ backgroundImage: !victoria ? `url(${caracter[0]})` : `url(${celebration})`, height: '30px', width: '30px', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }} />)
+                                        return (<div key={index2.id} css={{ backgroundImage: !victoria ? `url(${caracter[0]})` : `url(${celebration})`, height: '30px', width: '30px', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }} />)
                                     }
                                     if (pared === 'g') {
-                                        return (<div key={`${index.id}${index2.id}`} css={{ backgroundImage: `url(${treasure})`, height: '30px', width: '30px', backgroundSize: 'contain' }} />)
+                                        return (<div key={index2.id} css={{ backgroundImage: `url(${treasure})`, height: '30px', width: '30px', backgroundSize: 'contain' }} />)
                                     }
                                     if (pared === '+' || pared === '|' || pared === '-') {
-                                        return (<div key={`${index.id}${index2.id}`} css={{ backgroundImage: `url(${wall})`, height: '30px', width: '30px', backgroundSize: 'contain' }} />)
+                                        return (<div key={index2.id} css={{ backgroundImage: `url(${wall})`, height: '30px', width: '30px', backgroundSize: 'contain' }} />)
                                     }
-                                    return (<div key={`${index.id}${index2.id}`} css={{ height: '30px', width: '30px' }} />)
+                                    return (<div key={index2.id} css={{ height: '30px', width: '30px' }} />)
                                 })}
 
                             </div>
@@ -96,7 +96,7 @@ const Maze = ({ caminos, setCaminos, victoria, setVictoria }) => {
 }
 
 Maze.propTypes = {
-    caminos: PropTypes.isRequired,
+    caminos: PropTypes.array.isRequired,
     setCaminos: PropTypes.func.isRequired,
     victoria: PropTypes.bool.isRequired,
     setVictoria: PropTypes.func.isRequired,
