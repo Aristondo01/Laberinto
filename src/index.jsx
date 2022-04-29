@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { createRoot } from 'react-dom/client'
 import Header from './components/Header.jsx'
 import Maze from './components/Maze.jsx'

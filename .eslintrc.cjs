@@ -18,6 +18,8 @@ module.exports = {
     rules: {
         semi: ['error', 'never'],
         'import/extensions': 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
         'react/function-component-definition': [
             2,
             {
