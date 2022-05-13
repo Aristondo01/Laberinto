@@ -4,6 +4,7 @@ import Header from './components/Header.jsx'
 import Maze from './components/Maze.jsx'
 import cancion from '../public/Multimedia/OrquestaJones.mp3'
 
+// Sebastián Aristondo Pérez
 const App = () => {
     const [caminos, setCaminos] = useState(null)
     const [alto, setAlto] = useState(5)
